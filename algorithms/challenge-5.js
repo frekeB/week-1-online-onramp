@@ -1,3 +1,27 @@
-function replaceDivisible(x, y) {}
+function replaceDivisible(x, y) {
+  let length = x.length;
 
-module.exports = replaceDivisible
+  for (let i = 0; i < length; i++) {
+    if (x[i] % y === 0) {
+      x[i] = "isDivisible";
+    }
+  }
+  return x;
+}
+console.log(replaceDivisible());
+
+/*function replaceDivisible(x, y) {
+
+    let length = x.length;
+
+  for (let i = 0; i < length; i++) {
+
+    if (x[i] % y === 0) {
+      
+      x[i] = "isDivisible";
+    }
+  }
+  return x;
+}*/
+
+module.exports = replaceDivisible;
